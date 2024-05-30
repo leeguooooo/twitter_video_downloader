@@ -1,4 +1,3 @@
-readme_content = """
 # Flask Application with Hot Reloading
 
 This project is a Flask-based application with hot reloading capabilities. The application includes routes for authentication, configuration management, and video download from Twitter. It also provides real-time progress updates via SSE and log streaming.
