@@ -1,0 +1,4 @@
+.venv/*
+work-aarch64-7.0/*
+work-all/*
+config.json

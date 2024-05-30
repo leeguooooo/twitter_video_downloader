@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Twitter Video Downloader</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+	<div class="container">
+		<h1>Twitter Video Downloader</h1>
+		<div id="log-container"></div>
+
+		<form id="login-form">
+			<label for="login-username">Username:</label>
+			<input type="text" id="login-username" name="username" required>
+			<label for="login-password">Password:</label>
+			<input type="password" id="login-password" name="password" required>
+			<button type="submit">Login</button>
+		</form>
+		<div id="login-message"></div>
+
+		<form id="download-form" style="display:none;">
+			<label for="twitter-url">Twitter Video URL:</label>
+			<input type="text" id="twitter-url" name="twitter-url" required>
+			<button type="submit">Download Video</button>
+		</form>
+		<div id="download-message"></div>
+		<div id="progress">Download progress: 0%</div>
+		<div id="size">Downloaded size: 0 / 0 bytes</div>
+		<div id="download-link"></div>
+		<div id="video-container"></div>
+		<div id="url-map-container">
+			<h2>Downloaded Videos</h2>
+			<button id="load-videos-button">Load Videos</button>
+			<ul id="url-map-list"></ul>
+		</div>
+		<form id="config-form" style="display:none;">
+			<label for="username">Username:</label>
+			<input type="text" id="username" name="username" required>
+			<label for="password">Password:</label>
+			<input type="password" id="password" name="password" required>
+			<button type="submit">Save Credentials</button>
+		</form>
+		<div id="message"></div>
+	</div>
+
+	<script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+
+</html>
